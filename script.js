@@ -1,4 +1,6 @@
 const gridContainer = document.getElementById("gridContainer");
+const gridValue = document.getElementById("grid-value");
+const 
 
 function makeRows(rows, cols) {
   gridContainer.style.setProperty('--grid-rows', rows);
@@ -9,5 +11,11 @@ function makeRows(rows, cols) {
     cell.classList.add('box');
   };
 };
+
+gridSlider.onmousemove = (e) => updateSize(e.target.value)
+
+function updateSize(value) {
+gridValue.textContent = `${value} x ${value}`
+}
 
 makeRows(16, 16);

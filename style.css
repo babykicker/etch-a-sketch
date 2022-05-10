@@ -3,22 +3,67 @@
     --grid-rows: 1;
 }
 
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid green;
+  border-radius: 10px;
+  width: 75%;
+  margin: 10px;
+}
+
 body {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     font-family: 'Press Start 2P', cursive;
+  border: 1px solid yellow;
+  width: 100%;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  align-content: space-between;
+  border: 1px solid blue;
+  width: 80%;
+  margin: 10px;
+  padding: 20px;
+}
+
+.options {
+  display: block;
+  flex-flow: column wrap;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid red;
+  padding: 1em;
+  width: 100%;
+  margin: 20px;
+}
+
+input {
+    width: 100%;
 }
 
 #gridContainer {
     display: grid;
-    grid-gap: 0em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+  border: 2px solid cyan
 }
 
 .grid-item {
  padding: 1em;
- border: 1px solid black;
+ border: .25px solid gray;
  text-align: center;   
 }
 
